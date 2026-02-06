@@ -22,7 +22,7 @@ def log_state():
     if _frame_count > _FPS * _MAX_SECONDS:
         return
 
-    # Take a snapshot approx. once per second
+    # Take a snapshot approx once per second
     _frame_count += 1
     if _frame_count % _FPS != 0:
         return
