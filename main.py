@@ -12,9 +12,10 @@ from shot import Shot
 
 def main():
     pygame.init()
-    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    clock = pygame.time.Clock()
+    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT)) # creating the screen
+    clock = pygame.time.Clock() # creating the clock
 
+    # creating groups of sprites
     shots = pygame.sprite.Group()
     asteroids = pygame.sprite.Group()
     updatable = pygame.sprite.Group()
@@ -56,10 +57,10 @@ def main():
                 print("Game over!")
                 sys.exit()
 
-        screen.fill("black")
+        screen.fill("black") # setting the screen colour
 
         for drawables in drawable:
-            drawables.draw(screen)
+            drawables.draw(screen) # drawing the drawable sprites
 
         pygame.display.flip()
 
